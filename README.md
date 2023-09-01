@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/Mirsario/TerrariaOverhaul/blob/1.4/Content/Menus/Logo.png?raw=true" alt="Sublime's custom image"/>
+  <img src="https://github.com/WhoPlaysTheFool/TerrariaOverhaul/blob/dev/Content/Menus/Logo.png?raw=true" alt="Sublime's custom image"/>
 </p>
 
 
