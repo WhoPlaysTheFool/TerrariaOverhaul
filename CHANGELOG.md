@@ -30,7 +30,35 @@
 
 # Work In Progress
 
-Nothing so far!
+### Additions
+- Opening doors with dodgerolls will now deal high-knockback damage to entities.
+
+### Changes
+- Heavily improved combat info tooltips. They now have far more information and feature formatting and color highlighting. They were also added to Hammers, Axes and Pickaxes.
+- Changed mana pickups' particles, fixed these particles being influenced by the local player's movement.
+- Removed a 2-tick (33.33 milliseconds) use speed penalty from items that have its auto-reuse (auto-swing) forced on by Overhaul. This is pointless to do now that 1.4.4 Terraria decided to allow auto-reuse for every item as a weird opt-in without rebalancing items to account for that change.
+
+### Localization
+- Polish - PR [#205](https://github.com/Mirsario/TerrariaOverhaul/pull/205) by **J00niper**.
+- Spanish - PR [#207](https://github.com/Mirsario/TerrariaOverhaul/pull/207) by **cottonman132**.
+- French - PR [#208](https://github.com/Mirsario/TerrariaOverhaul/pull/208) by **orian34**.
+
+### Optimizations
+- Improved performance of the implementation of the flood fill algorithm, which the mod uses mostly to analyze the player's surroundings for sound reverberation & wall-based occlusion.
+- Slightly improved performance of the implementation of the Bresenham Line algorithm, which the mod uses for block-based sound occlusion checking.
+
+### Compatibility
+- The aforementioned ForceAutoReuse penalty removal works around a compatibility bug in `AFK's Pets` that resulted in many items being used more than once. The cause of that bug issue is still to be fixed by `AFK's Pets` authors.
+
+### Fixes
+- Fixed issue [#200](https://github.com/Mirsario/TerrariaOverhaul/issues/200) (Killing Blow Localizations are Outdated).
+- Partially fixed issue [#198](https://github.com/Mirsario/TerrariaOverhaul/issues/198) (Various problems with 1.4.4 sword changes):
+	- Fixed the `Volcano`, `Blood Butcherer`, and a few other melee weapons using incorrect rotations & locations for their particle effects.
+	- Fixed the following projectile-only swords not getting the broadsword overhaul: `Night's Edge`, `Excalibur`, `True Excalibur`, `True Night's Edge`, `Terra Blade`, `The Horseman's Blade`.
+	- Fixed `Blade of Grass` and projectile-only swords being able to create projectiles during a power attack charge.
+	- Fixed projectile-only swords not being fully aimable.
+- Fixed ambience sounds' instances having a position, and thus being subject to rather inadequate and irritating sound occlusion & low pass filtering.
+- Fixed a possible `IndexOutOfRangeException` in `FloodFill` method used by `SurroundingsReverb`.
 
 # 5.0 BETA 13B
 
